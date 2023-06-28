@@ -62,10 +62,11 @@ import { GossipContactInfoJobScheduler } from './storage/jobs/gossipContactInfoJ
 import { MAINNET_ALLOWED_PEERS } from './allowedPeers.mainnet.js';
 import StoreEventHandler from './storage/stores/storeEventHandler.js';
 import { FNameRegistryClient, FNameRegistryEventsProvider } from './eth/fnameRegistryEventsProvider.js';
+import packageJson from './package.json';
 
 export type HubSubmitSource = 'gossip' | 'rpc' | 'eth-provider' | 'sync' | 'fname-registry';
 
-export const APP_VERSION = process.env['npm_package_version'] ?? '1.0.0';
+export const APP_VERSION = packageJson.version;
 export const APP_NICKNAME = process.env['HUBBLE_NAME'] ?? 'Farcaster Hub';
 
 export const FARCASTER_VERSION = '2023.5.31';

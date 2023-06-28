@@ -6,7 +6,7 @@ const jestConfig: Config = {
   testPathIgnorePatterns: ['<rootDir>/build', '<rootDir>/node_modules'],
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
-    '^(\\.{1,2}/.*)\\.js$': '$1',
+    '^(\\.{1,2}/.*)\\.js(on)?$': '$1',
   },
   /**
    * For high performance with minimal configuration transform with TS with swc.
